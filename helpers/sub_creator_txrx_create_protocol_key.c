@@ -121,6 +121,7 @@ bool sub_creator_txrx_gen_keeloq_seed_protocol(
     txrx->transmitter = subghz_transmitter_alloc_init(txrx->environment, "KeeLoq");
     sub_creator_txrx_set_preset(txrx, preset_name, frequency, NULL, 0);
 
+#if defined(FW_ORIGIN_Unleashed)
     if(txrx->transmitter && subghz_protocol_keeloq_seed_create_data(
                                 subghz_transmitter_get_protocol_instance(txrx->transmitter),
                                 txrx->fff_data,
@@ -132,6 +133,19 @@ bool sub_creator_txrx_gen_keeloq_seed_protocol(
                                 txrx->preset)) {
         res = true;
     }
+#elif defined(FW_ORIGIN_Momentum)
+    if(txrx->transmitter && subghz_protocol_keeloq_bft_create_data(
+                                subghz_transmitter_get_protocol_instance(txrx->transmitter),
+                                txrx->fff_data,
+                                serial,
+                                btn,
+                                cnt,
+                                seed,
+                                manufacture_name,
+                                txrx->preset)) {
+        res = true;
+    }
+#endif
 
     if(res) {
         uint8_t seed_data[sizeof(uint32_t)] = {0};

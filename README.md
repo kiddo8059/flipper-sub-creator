@@ -55,7 +55,7 @@ keystore/  - Key Storage
 
 ## ✅ Compatibility
 - Flipper Zero
-- Official firmware and other
+- Only the Unleashed and Momentum firmware
 
 ## ⚠️ Disclaimer
 This project is intended for:
