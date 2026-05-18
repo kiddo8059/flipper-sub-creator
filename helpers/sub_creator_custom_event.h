@@ -6,6 +6,7 @@ typedef enum {
 
     SubCreatorCustomEventSceneSaveName,
     SubCreatorCustomEventSceneSaveSuccess,
+    SubCreatorCustomEventSceneSaveOpenSub,
     SubCreatorCustomEventSceneShowErrorBack,
     SubCreatorCustomEventSceneShowErrorOk,
     SubCreatorCustomEventSceneShowErrorSub,
