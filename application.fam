@@ -1,0 +1,15 @@
+App(
+    appid="sub_creator",
+    name="Sub Creator",
+    apptype=FlipperAppType.EXTERNAL,
+    targets=["f7"],
+    entry_point="sub_creator_app",
+    stack_size=2 * 1024,
+    fap_icon="icon.png",
+    fap_icon_assets="icons",
+    fap_file_assets="keystore",
+    fap_category="Sub-GHz/FHP",
+    fap_version="0.1",
+    fap_author="@Lemn4t",
+    fap_weburl="https://github.com/Flipper-Hack/flipper-sub-creator",
+)
