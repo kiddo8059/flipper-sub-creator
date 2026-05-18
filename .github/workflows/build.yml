@@ -49,6 +49,22 @@ jobs:
                   cd dist
                   zip -r sub_creator.zip Momentum Unleashed
 
+            - name: Generate Release Notes
+              run: |
+                  cat > RELEASE_NOTES.md << 'EOF'
+                  # 📥 Installation
+                  1. Download the archive `sub_creator.zip`
+                  2. Extract the archive.
+                  3. Open the folder matching your firmware.
+                  4. Inside, locate the sub_creator.fap file.
+                  5. Connect your Flipper Zero to your computer.
+                  6. Open qFlipper.
+                  7. Copy sub_creator.fap to: `/ext/apps/Sub-GHz/`
+                  8. Launch the app from: `Apps -> Sub-GHz -> Sub Creator`
+
+                  EOF
+                  cat CHANGELOG.md >> RELEASE_NOTES.md
+
             - name: Get app info
               id: app-info
               run: |
@@ -61,15 +77,6 @@ jobs:
                   tag_name: ${{ steps.app-info.outputs.fap_version }}
                   name: Sub Creator v${{ steps.app-info.outputs.fap_version }}
                   files: dist/sub_creator.zip
-                  body: |
-                      ## 📥 Installation
-                      1. Download the archive `sub_creator.zip`
-                      2. Extract the archive.
-                      3. Open the folder matching your firmware.
-                      4. Inside, locate the sub_creator.fap file.
-                      5. Connect your Flipper Zero to your computer.
-                      6. Open qFlipper.
-                      7. Copy sub_creator.fap to: `/ext/apps/Sub-GHz/`
-                      8. Launch the app from: `Apps -> Sub-GHz -> Sub Creator`
+                  body_path: RELEASE_NOTES.md
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
