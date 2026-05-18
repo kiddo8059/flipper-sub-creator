@@ -13,6 +13,8 @@ void sub_creator_scene_start_on_enter(void* context) {
 
     SubCreator* app = context;
 
+    submenu_set_header(app->submenu, "Sub Creator");
+
     submenu_add_item(app->submenu, "Create", SubmenuIndexCreate, sub_creator_scene_start_submenu_callback, app);
     submenu_add_item(
         app->submenu, "Create [Advanced]", SubmenuIndexCreateAdvanced, sub_creator_scene_start_submenu_callback, app);

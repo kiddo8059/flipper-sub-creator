@@ -9,7 +9,7 @@ App(
     fap_icon_assets="icons",
     fap_file_assets="keystore",
     fap_category="Sub-GHz/FHP",
-    fap_version="0.1",
+    fap_version="0.2",
     fap_author="@Lemn4t",
     fap_weburl="https://github.com/Flipper-Hack/flipper-sub-creator",
 )
