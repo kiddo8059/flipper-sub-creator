@@ -52,7 +52,7 @@ jobs:
             - name: Generate Release Notes
               run: |
                   cat > RELEASE_NOTES.md << 'EOF'
-                  # 📥 Installation
+                  ## 📥 Installation
                   1. Download the archive `sub_creator.zip`
                   2. Extract the archive.
                   3. Open the folder matching your firmware.
