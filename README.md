@@ -11,6 +11,10 @@ A simple Flipper Zero application for generating and saving custom Sub-GHz key f
 - Designed for quick testing and experimentation
 
 ## 📸 Screenshots
+<p align="center">
+  <img src=".github/screenshots/1.png" width="45%" />
+  <img src=".github/screenshots/2.png" width="45%" />
+</p>
 
 ## 📥 Installation
 ### Using qFlipper
